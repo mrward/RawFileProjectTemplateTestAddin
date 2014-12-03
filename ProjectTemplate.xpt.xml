@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<Template originator   = "Matt Ward"
+          created      = "02/01/2003"
+          lastModified = "02/01/2003">
+	
+	<!-- Template Header -->
+	<TemplateConfiguration>
+		<_Name>Raw File No Extension Test</_Name>
+		<_Category>RawFileTest</_Category>
+		<Icon>md-project-library</Icon>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates an project with one file that should not have a file extension</_Description>
+	</TemplateConfiguration>
+	
+	<!-- Template Content -->
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		
+		<Project name = "${ProjectName}" directory = ".">
+			<Options Target = "Library" PauseConsoleOutput = "False" />
+			<References>
+				<Reference type="Package" refto="System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+			</References>
+			<Files>
+				<RawFile name="MyFile" src="MyFile" DefaultExtension = "" />
+			</Files>
+		</Project>
+	</Combine>
+</Template>

@@ -1,0 +1,25 @@
+﻿<Addin name        = "Raw File No Extension Test"
+       id          = "Test.RawFileProjectTemplate"
+       namespace   = "MonoDevelop"
+       author      = "Matt Ward"
+       copyright   = "MIT"
+       url         = "https://github.com/mrward"
+       description = "Test addin"
+       category    = "IDE extensions"
+       version     = "0.1">
+	
+	<Runtime>
+		<Import file="ProjectTemplate.xpt.xml" />
+		<Import file="MyFile" />
+	</Runtime>
+
+	<Dependencies>
+		<Addin id="Core" version="5.0"/>
+		<Addin id="Ide" version="5.0"/>
+	</Dependencies>
+	
+	<Extension path="/MonoDevelop/Ide/ProjectTemplates">
+		<ProjectTemplate id="RawFileTest-Project" file="ProjectTemplate.xpt.xml" />
+	</Extension>
+
+</Addin>
